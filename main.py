@@ -6,7 +6,7 @@ myapp=Flask(__name__)
 def main():
     return render_template("index.html")
 
-@myapp.route("/home")
+@myapp.route("/home.html")
 def home():
     return render_template("home.html")
 
