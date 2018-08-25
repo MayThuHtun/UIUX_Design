@@ -1,4 +1,5 @@
 from flask import Flask, render_template, url_for, request, jsonify
+import zg2uni
 
 
 myapp=Flask(__name__)
@@ -14,7 +15,8 @@ def convert():
     source = request.form['source']
 
     if myinput == "Zawgyi" and myoutput == "Unicode":
-        return jsonify({'output': "Zawgyi to Unicode"})
+        output = zg2uni.convert(source)
+        return jsonify({'output': "output"})
     return jsonify({'output': "YAYAYAY"})
 
 @myapp.route("/home")
