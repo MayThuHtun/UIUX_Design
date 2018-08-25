@@ -35,9 +35,9 @@ def win2uni():
 def partner():
     return render_template("partner.html")
 
-@myapp.route("/question & answer")
-def question & answer():
-    return render_template("question & answer.html")
+@myapp.route("/question_and_answer")
+def question_and_answer():
+    return render_template("question_and_answer.html")
 
 @myapp.route("/resources")
 def resources():
