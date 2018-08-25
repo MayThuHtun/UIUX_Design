@@ -11,12 +11,12 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-    <link rel="stylesheet" href="css/material.min.css">
-    <script src="js/material.min.js"></script>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/material.min.css')}}">
+    <script src="{{url_for('static',filename='js/material.min.js')}}"></script>
     <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="{{url_for('static',filename='css/materialize.min.css')}}"  media="screen,projection"/>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     <title></title>
@@ -48,7 +48,7 @@
     <div class="nav-wrapper">
       <a href="#" class="brand-logo">Universal App Conveter</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="home.html"> <i class="medium material-icons">arrow_back</i></a></li>
+	      <li><a href="{{url_for('home')}}"> <i class="medium material-icons">arrow_back</i></a></li>
       </ul>
     </div>
   </nav>
@@ -57,7 +57,7 @@
     <div class="col s12 m4">
       <div class="card">
     <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="img/pyc.jpg" alt="">
+	    <img class="activator" src="{{url_for('static',filename='img/pyc.jpg')}}" alt="">
     </div>
     <div class="card-content">
       <span class="card-title activator grey-text text-darken-4">PyCharm<i class="material-icons right">more_vert</i></span>
@@ -75,7 +75,7 @@
 <div class="col s12 m4">
   <div class="card">
     <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="img/py.jpg" alt="">
+	    <img class="activator" src="{{url_for('static',filename='img/py.jpg')}}" alt="">
     </div>
     <div class="card-content">
       <span class="card-title activator grey-text text-darken-4">Python<i class="material-icons right">more_vert</i></span>
@@ -104,7 +104,7 @@ Python interpreters are available for many operating systems. CPython, the refer
                
             <h5 class="white-text">Features</h5>
               <ul>  
-                   <li><a class="grey-text text-lighten-3" href="partner.html">Partners</a></li>
+		      <li><a class="grey-text text-lighten-3" href="{{url_for('partner')}}">Partners</a></li>
                   
               </ul>
           </div>
@@ -113,9 +113,9 @@ Python interpreters are available for many operating systems. CPython, the refer
                
             <h5 class="white-text">Details</h5>
               <ul>
-                  <li><a class="grey-text text-lighten-3" href="resources.html">Resource</a></li>
+		      <li><a class="grey-text text-lighten-3" href="{{url_for('resources')}}">Resource</a></li>
                   
-                  <li><a class="grey-text text-lighten-3" href="tools.html">Tools</a></li>
+		      <li><a class="grey-text text-lighten-3" href="{{url_for('tools')}}">Tools</a></li>
                   
               </ul>
           </div>
@@ -124,7 +124,7 @@ Python interpreters are available for many operating systems. CPython, the refer
                
             <h5 class="white-text">Technology</h5>
               <ul>
-                  <li><a class="grey-text text-lighten-3" href="work.html">How it work</a></li>
+		      <li><a class="grey-text text-lighten-3" href="{{url_for('work')}}">How it work</a></li>
                   
               </ul>
           </div>
@@ -133,7 +133,7 @@ Python interpreters are available for many operating systems. CPython, the refer
                
             <h5 class="white-text">FAQ</h5>
               <ul>    
-                  <li><a class="grey-text text-lighten-3" href="question & answer.html">Questions & Answers</a></li>
+		      <li><a class="grey-text text-lighten-3" href="{{url_for('question & answer')}}">Questions & Answers</a></li>
                   
               </ul>
           </div>
@@ -156,6 +156,6 @@ Python interpreters are available for many operating systems. CPython, the refer
     
     </footer>
     <!--JavaScript at end of body for optimized loading-->
-      <script type="text/javascript" src="js/materialize.min.js"></script>
+	<script type="text/javascript" src="{{url_for('static',filename='js/materialize.min.js')}}"></script>
   </body>
 </html>

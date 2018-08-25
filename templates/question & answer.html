@@ -4,7 +4,7 @@
       <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="{{url_for('static',filename='css/materialize.min.css')}}"  media="screen,projection"/>
 
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -42,7 +42,7 @@
     <div class="nav-wrapper">
       <a href="#" class="brand-logo">Universal App Conveter</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="home.html"> <i class="medium material-icons">arrow_back</i></a></li>
+	      <li><a href="{{url_for('home')}}"> <i class="medium material-icons">arrow_back</i></a></li>
       </ul>
     </div>
   </nav>
@@ -51,7 +51,7 @@
     <div class="col s12">
       <div class="card">
         <div class="card-image">
-          <img src="img/team/Capture.PNG">
+		<img src="{{url_for('static',filename='img/team/Capture.PNG')}}">
         </div>
       </div>
     </div>
@@ -135,7 +135,7 @@
 </div>
 
       <!--JavaScript at end of body for optimized loading-->
-      <script type="text/javascript" src="js/materialize.min.js"></script>
+	<script type="text/javascript" src="{{url_for('static',filename='js/materialize.min.js')}}"></script>
     </body>
   </html>
         

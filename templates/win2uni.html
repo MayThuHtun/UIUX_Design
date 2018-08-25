@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="css/materialize.min.css"/>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/materialize.min.css')}}"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-		<script type="text/javascript" src="JQuery/jquery.js"></script>
+	<script type="text/javascript" src="{{url_for('static',filename='JQuery/jquery.js')}}"></script>
 <style>
 #textarea2,#textarea1
 	
@@ -71,17 +71,18 @@
 
 		<ul id="dropdown1" class="dropdown-content">
 			
-			<li><a href="home.html">Zawgyi To Unicode </a></li>
 		
-			<li><a href="zg2win.html">Zawgyi To WinInnwa</a></li>
+			<li><a href="{{url_for('home')}}">Zawgyi To Unicode </a></li>
+		
+			<li><a href="{{url_for('zg2win')}}">Zawgyi To WinInnwa</a></li>
 			 <li class="divider"></li>
-			<li><a href="uni2zg.html">Unicode To Zawgyi</a></li>
+			 <li><a href="{{url_for('uni2zg')}}">Unicode To Zawgyi</a></li>
 
-			<li><a href="uni2win.html">Unicode To WinInnwa</a></li>
-            <li class="divider"></li>
-			<li><a href="win2zg.html">WinInnwa to Zawgyi</a></li>
+			 <li><a href="{{url_for('uni2win')}}">Unicode To WinInnwa</a></li>
+			 <li class="divider"></li>
+			 <li><a href="{{url_for('win2zg')}}">WinInnwa to Zawgyi</a></li>
 
-			<li><a href="win2uni.html">WinInnwa to Unicode</a></li>
+			 <li><a href="{{url_for('win2uni')}}">WinInnwa to Unicode</a></li>
 
 		
 		</ul>
@@ -113,12 +114,12 @@
 	  	<div class="row">
 		  <div class="input-field col s6">
 		    <textarea id="textarea2"></textarea>
-            <label for="textarea2">Zawgyi</label>
+            <label for="textarea2">WinInnwa</label>
           </div>
          
           <div class="input-field col s6">
 		    <textarea id="textarea1" ></textarea>
-            <label for="textarea1">WinnInwa</label>
+            <label for="textarea1">Unicode</label>
           </div>
         </div>
         <div class="row">
@@ -145,7 +146,7 @@
                
 						<h5 class="white-text">Features</h5>
 							<ul> 
-								  <li><a class="grey-text text-lighten-3" href="partner.html">Partners</a></li>
+								<li><a class="grey-text text-lighten-3" href="{{url_for('partner')}}">Partners</a></li>
 								  
 							</ul>
 					</div>
@@ -154,9 +155,9 @@
                
 						<h5 class="white-text">Details</h5>
 							<ul>
-								  <li><a class="grey-text text-lighten-3" href="resources.html">Resource</a></li>
+								<li><a class="grey-text text-lighten-3" href="{{url_for('resources')}}">Resource</a></li>
 								  
-								  <li><a class="grey-text text-lighten-3" href="tools.html">Tools</a></li>
+								<li><a class="grey-text text-lighten-3" href="{{url_for('tools')}}">Tools</a></li>
 								  
 							</ul>
 					</div>
@@ -165,7 +166,7 @@
                
 						<h5 class="white-text">Technology</h5>
 							<ul>
-								  <li><a class="grey-text text-lighten-3" href="work.html">How it work</a></li>
+								<li><a class="grey-text text-lighten-3" href="{{url_for('work')}}">How it work</a></li>
 								  
 							</ul>
 					</div>
@@ -174,7 +175,7 @@
                
 						<h5 class="white-text">FAQ</h5>
 							<ul>	  
-								  <li><a class="grey-text text-lighten-3" href="question & answer.html">Questions & Answers</a></li>
+								<li><a class="grey-text text-lighten-3" href="{{url_for('question & answer')}}">Questions & Answers</a></li>
 								  
 							</ul>
 					</div>
@@ -196,7 +197,7 @@
 			</div>
     
 		</footer>
-<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script type="text/javascript" src="{{url_for('static',filename='js/materialize.min.js')}}"></script>
 </body>
 </html>
     
