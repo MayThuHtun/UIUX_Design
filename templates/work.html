@@ -10,23 +10,23 @@
     <meta name="msapplication-tap-highlight" content="no">
 
     <!-- Web Application Manifest -->
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="{{url_for('static',filename='manifest.json')}}">
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Web Starter Kit">
-    <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+    <link rel="icon" sizes="192x192" href="{{url_for('static',filename='images/touch/chrome-touch-icon-192x192.png')}}">
 
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
-    <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="{{url_for('static',filename='images/touch/apple-touch-icon.png')}}">
 
     <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileImage" content="{{url_for('static',filename='images/touch/ms-touch-icon-144x144-precomposed.png')}}">
     <meta name="msapplication-TileColor" content="#2F3BA2">
 
     <!-- Color the status bar on mobile devices -->
@@ -51,13 +51,13 @@
     <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
 
     <!-- Your styles -->
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='styles/main.css')}}">
     
-    <link rel="stylesheet" href="css/material.min.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/material.min.css')}}">
     
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
-    <script type="text/javascript" src="js/materialize.js"></script>    
+	<script type="text/javascript" src="{{url_for('static',filename='js/materialize.js')}}"></script>    
     <style>
         .page-footer
           {
@@ -92,7 +92,7 @@
           <span class="mdl-layout-title">Geo_Gold_Team</span>
           <div class="mdl-layout-spacer"></div>
           <nav class="mdl-navigation mdl-layout--large-screen-only" style="background-color: rgb(63,81,181);">
-          <a href="home.html" class="is-active mdl-navigation"><i class="large material-icons">home</i></a>
+		  <a href="{{url_for('home')}}" class="is-active mdl-navigation"><i class="large material-icons">home</i></a>
         </nav> 
         </div>
       </header>
@@ -156,7 +156,7 @@
       </main>
 <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
     <!-- build:js scripts/main.min.js -->
-    <script src="scripts/main.js"></script>
+    <script src="{{url_for('static',filename='scripts/main.js')}}"></script>
     <!-- endbuild -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
