@@ -24,7 +24,7 @@ def uni2win():
     return render_template("uni2win.html")
 
 @myapp.route("/win2zg")
-def winzg():
+def win2zg():
     return render_template("winzg.html")
 
 @myapp.route("/win2uni")
