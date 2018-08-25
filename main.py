@@ -14,7 +14,7 @@ def convert():
     source = request.form['source']
 
     if myinput == "Zawgyi" and myoutput == "Unicode":
-        return jsonify({'output': "Zawgyi to` Unicode"})
+        return jsonify({'output': "Zawgyi to Unicode"})
     return jsonify({'output': "YAYAYAY"})
 
 @myapp.route("/home")
