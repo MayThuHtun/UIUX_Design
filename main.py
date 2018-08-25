@@ -7,6 +7,16 @@ myapp=Flask(__name__)
 def main():
     return render_template("index.html")
 
+@myapp.route("/convert", methods=["POST"])
+def convert():
+    myinput = request.form['myinput']
+    myoutput = request.form['myoutput']
+    source = request.form['source']
+
+    if myinput == "Zawgyi" and myoutput == "Unicode":
+        return jsonify({'output': "Zawgyi to` Unicode"})
+    return jsonify({'output': "YAYAYAY"})
+
 @myapp.route("/home")
 def home():
     return render_template("home.html")
