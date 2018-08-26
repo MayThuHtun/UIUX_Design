@@ -7,8 +7,8 @@ $(document).ready(function() {
 		if(this.value == 'Unicode') {
 			$('#source').css("font-family", "Pyidaungsu");
 		}
-		if(this.value == 'WinMyanmar'){
-			$('#source').css("font-family", "Win_Innwaregular");
+		if(this.value == 'Win-Innwa'){
+			$('#source').css("font-family", "WinMyanmar");
 		}
 	});
 
@@ -20,9 +20,8 @@ $(document).ready(function() {
 		else if (this.value == 'Unicode') {
 			$("#destination").css("font-family", "Pyidaungsu");
 		}
-		if (this.value == 'WinMyanmar'){
-			$("#destination").css("font-family"), "Win_Innwaregular");
-		}
+		if (this.value == 'Win_Innwa'){
+			$("#destination").css("font-family"), "WinMyanmar");		}
 	});
 });
 I
