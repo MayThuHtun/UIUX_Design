@@ -20,8 +20,8 @@ $(document).ready(function() {
 		else if (this.value == 'Unicode') {
 			$("#destination").css("font-family", "Pyidaungsu");
 		}
-		if (this.value == 'WinMyanmar'){
-			$("#destination").css("font-family"), "Win-Innwa");
+		if (this.value == 'Win-Innwa'){
+			$("#destination").css("font-family"), "WinMyanmar");
 		}
 	});
 });
