@@ -11,6 +11,10 @@ myapp=Flask(__name__)
 def main():
     return render_template("index.html")
 
+@myapp.route("/home")
+def home():
+    return render_template("home.html")
+
 @myapp.route("/convert", methods=["POST"])
 def convert():
     myinput = request.form['myinput']
@@ -19,9 +23,9 @@ def convert():
 
     if myinput == "Zawgyi" and myoutput == "Unicode":
         output = zg2uni.convert(source)
-        #return jsonify({'output': output})
-    if myinput == "Zawgyi" and myoutput == "WinInnwa":
-        output = zg2uni.convert(uni2win.convert(source))
+        return jsonify({'output': output})
+    #if myinput == "Zawgyi" and myoutput == "WinInnwa":
+        #output = zg2uni.convert(uni2win.convert(source))
         #output = uni2win.convert(output)
         #return jsonify({'output': output})
     #if myinput == "Unicode" and myoutput == "Zawgyi":
@@ -39,14 +43,19 @@ def convert():
     return jsonify({'output': output})
 
 
-
-@myapp.route("/home")
-def home():
-    return render_template("home.html")
-
 @myapp.route("/zg2win")
 def zg2win():
     return render_template("zg2win.html")
+@myapp.route("/convertzgwin", methods=["POST"])
+def convert1():
+    myinput = request.form['myinput']
+    myoutput = request.form['myoutput']
+    source = request.form['source']
+
+    if myinput == "Zawgyi" and myoutput == "WinInnwa":
+        output = zg2uni.convert(source)
+        output = uni2win.convert(output)
+        return jsonify({'output': output})
 
 @myapp.route("/uni2zg")
 def uni2zg():
