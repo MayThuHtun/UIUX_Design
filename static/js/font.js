@@ -8,7 +8,7 @@ $(document).ready(function() {
 			$('#source').css("font-family", "Pyidaungsu");
 		}
 		if(this.value == 'WinMyanmar'){
-			$('#source').css("font-family", "Win-Innwa");
+			$('#source').css("font-family", "Win_Innwaregular");
 		}
 	});
 
@@ -20,8 +20,8 @@ $(document).ready(function() {
 		else if (this.value == 'Unicode') {
 			$("#destination").css("font-family", "Pyidaungsu");
 		}
-		if (this.value == 'Win-Innwa'){
-			$("#destination").css("font-family"), "WinMyanmar");
+		if (this.value == 'WinMyanmar'){
+			$("#destination").css("font-family"), "Win_Innwaregular");
 		}
 	});
 });
