@@ -20,21 +20,21 @@ def convert():
     if myinput == "Zawgyi" and myoutput == "Unicode":
         output = zg2uni.convert(source)
         return jsonify({'output': output})
-    if myinput == "Zawgyi" and myoutput == "WinInnwa":
+    if myinput == "Zawgyi" and myoutput == "WinMyanmar":
         output = zg2uni.convert(source)
         output = uni2win.convert(output)
         return jsonify({'output': output})
     if myinput == "Unicode" and myoutput == "Zawgyi":
         output = uni2zg.convert(source)
         return jsonify({'output': output})
-    if myinput == "Unicode" and myoutput == "WinInnwa":
+    if myinput == "Unicode" and myoutput == "WinMyanmar":
         output = uni2win.convert(source)
         return jsonify({'output': output})
-    if myinput == "WinInnwa" and myoutput == "Zawgyi":
+    if myinput == "WinMyanmar" and myoutput == "Zawgyi":
         output = win2uni.convert(source)
         output = uni2zg.convert(output)
         return jsonify({'output': output})
-    if myinput == "WinInnwa" and myoutput == "Unicode":
+    if myinput == "WinMyanmar" and myoutput == "Unicode":
         output = win2uni.convert(source)
         return jsonify({'output': output})
 
