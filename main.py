@@ -1,8 +1,8 @@
 from flask import Flask, render_template, url_for, request, jsonify
-import zg2uni
-import uni2win
-import uni2zg
-import win2uni
+import z2u
+import u2z
+import w2u
+import u2w
 
 
 myapp=Flask(__name__)
@@ -18,24 +18,24 @@ def convert():
     source = request.form['source']
 
     if myinput == "Zawgyi" and myoutput == "Unicode":
-        output = zg2uni.convert(source)
+        output = z2u.convert(source)
         return jsonify({'output': output})
     if myinput == "Zawgyi" and myoutput == "WinMyanmar":
-        output = zg2uni.convert(source)
-        output = uni2win.convert(output)
+        output = z2u.convert(source)
+        output = u2w.convert(output)
         return jsonify({'output': output})
     if myinput == "Unicode" and myoutput == "Zawgyi":
-        output = uni2zg.convert(source)
+        output = u2z.convert(source)
         return jsonify({'output': output})
     if myinput == "Unicode" and myoutput == "WinMyanmar":
-        output = uni2win.convert(source)
+        output = u2w.convert(source)
         return jsonify({'output': output})
     if myinput == "WinMyanmar" and myoutput == "Zawgyi":
-        output = win2uni.convert(source)
-        output = uni2zg.convert(output)
+        output = w2u.convert(source)
+        output = u2z.convert(output)
         return jsonify({'output': output})
     if myinput == "WinMyanmar" and myoutput == "Unicode":
-        output = win2uni.convert(source)
+        output = w2u.convert(source)
         return jsonify({'output': output})
 
     return jsonify({'output': "Enter your text"})
