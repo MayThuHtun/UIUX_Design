@@ -7,7 +7,7 @@
 	<script type="text/javascript" src="{{url_for('static',filename='JQuery/jquery.js')}}"></script>
 	<script type="text/javascript" src="{{url_for('static',filename='js/convert.js')}}"></script>
 <style>
-#textarea2,#textarea1
+#source,#destination
 	
 	{
 	
@@ -61,7 +61,7 @@
 		 $(document).ready(function()
 			{
 			
-			$('input#input_text, textarea#textarea2,textarea#textarea1').characterCounter();
+			$('input#input_text, textarea#source,textarea#destination').characterCounter();
 			
 			});
 			
