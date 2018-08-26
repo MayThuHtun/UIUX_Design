@@ -2,11 +2,15 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/materialize.min.css')}}"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+	<link rel="stylesheet" href='https://mmwebfonts.comquas.com/fonts/?font=zawgyi' />
+	<link rel="stylesheet" href='https://mmwebfonts.comquas.com/fonts/?font=pyidaungsu' />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 	<script type="text/javascript" src="{{url_for('static',filename='JQuery/jquery.js')}}"></script>
+	<script type="text/javascript" src="{{url_for('static',filename='js/convert.js')}}"></script>
+	<script type="text/javascript" src="{{url_for('static',filename='js/font.js')}}"></script>
 <style>
-#textarea2,#textarea1
+#source,#destination
 	
 	{
 	
@@ -60,7 +64,7 @@
 		 $(document).ready(function()
 			{
 			
-			$('input#input_text, textarea#textarea2,textarea#textarea1').characterCounter();
+			$('input#input_text, textarea#source,textarea#destination').characterCounter();
 			
 			});
 			
@@ -110,13 +114,13 @@
 	  <div class="row">
 	  	<div class="row">
 		  <div class="input-field col s6">
-		    <textarea id="textarea2"></textarea>
-            <label for="textarea2">Unicode</label>
+		    <textarea id="source"></textarea>
+            <label for="source">Unicode</label>
           </div>
          
           <div class="input-field col s6">
-		    <textarea id="textarea1" ></textarea>
-            <label for="textarea1">WinInnwa</label>
+		    <textarea id="destination" ></textarea>
+            <label for="destination">WinInnwa</label>
           </div>
         </div>
         <div class="row">

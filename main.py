@@ -1,5 +1,8 @@
 from flask import Flask, render_template, url_for, request, jsonify
 import zg2uni
+import uni2win
+import uni2zg
+import win2uni
 
 
 myapp=Flask(__name__)
@@ -16,7 +19,25 @@ def convert():
 
     if myinput == "Zawgyi" and myoutput == "Unicode":
         output = zg2uni.convert(source)
-        return jsonify({'output': "output"})
+        return jsonify({'output': output})
+    elif myinput == "Zawgyi" and myoutput == "WinInnwa":
+        output = zg2uni.convert(source)
+        output = uni2win.convert(output)
+        return jsonify({'output': output})
+    elif myinput == "Unicode" and myoutput == "Zawgyi":
+        output = uni2zg.convert(source)
+        return jsonify({'output': output})
+    elif myinput == "Unicode" and myoutput == "WinInnwa":
+        output = uni2win.convert(source)
+        return jsonify({'output': output})
+    elif myinput == "WinInnwa" and myoutput == "Zawgyi":
+        output = win2uni.convert(source)
+        output = uni2zg.convert(output)
+        return jsonify({'output': output})
+    elif myinput == "WinInnwa" and myoutput == "Unicode":
+        output = win2uni.convert(source)
+        return jsonify({'output': output})
+
     return jsonify({'output': "YAYAYAY"})
 
 @myapp.route("/home")
