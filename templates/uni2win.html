@@ -26,14 +26,14 @@
 		height:300px;
 		width:500px;
   }
-	@font-face
-	{
-		font-family: 'win_innwaregular';
-		src: url("{{url_for('static', filename='wininnwa-webfont.woff2')}}") format('woff2'), 
-			url("{{url_for('static', filename='wininnwa-webfont.woff')}}") format('woff');
-		font-weight: normal;
-		font-style: normal;
-	}
+@font-face 
+ { 
+	font-family: 'win_innwaregular';
+	src: url("{{url_for('static', filename='wininnwa-webfont.woff2')}}") format('woff2'),
+		url("{{url_for('static', filename='wininnwa-webfont.woff')}}") format('woff');
+	font-weight: normal;
+	font-style: normal;
+ }
   
 				body 
 					{
@@ -59,7 +59,6 @@
 					}
 </style>
 <script>
-
 	
 		$(document).ready(function()
 			{
@@ -208,5 +207,3 @@
 	<script type="text/javascript" src="{{url_for('static',filename='js/materialize.min.js')}}"></script>
 </body>
 </html>
-    
-    
