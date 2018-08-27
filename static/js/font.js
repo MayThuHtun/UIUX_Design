@@ -14,10 +14,10 @@ $(document).ready(function() {
 
 	$('label[for=source]').change(function(){
 		if(this.value == 'Zawgyi') {
-			$("#destination").css("font-family", "Zawgyi-One");
+			$("#destination").css("font-family", "Zawgyi-One")
 			console.log("Desination is Zawgyi-One");
 		}
-		else if (this.value == 'Unicode') {
+		if (this.value == 'Unicode') {
 			$("#destination").css("font-family", "Pyidaungsu");
 		}
 		if (this.value == 'WinMyanmar'){

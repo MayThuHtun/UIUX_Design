@@ -25,10 +25,11 @@
 	height:300px;
 	width:500px;
   }
-.font-face
+@font-face
 {
 	font-family: 'win_innwaregular';
-	src: url("{{url_for('static',filename='wininnwa-webfont.woff2')}}") format('woff2'),url("{{url_for('static',filename='wininnwa-webfont.woff')}}") format('woff');
+	src: url("{{url_for('static', filename='wininnwa-webfont.woff2')}}") format('woff2'),
+		url("{{url_for('static', filename='wininnwa-webfont.woff')}}") format('woff');
 	font-weight: normal;
 	font-style: normal;
 
@@ -122,7 +123,7 @@
 	  <div class="row">
 	  	<div class="row">
 		  <div class="input-field col s6">
-			  <textarea id="source" style="font-family: WinMyanmar;"></textarea>
+			  <textarea id="source" style="font-family: win_innwaregular;"></textarea>
             <label for="source">WinMyanmar</label>
           </div>
          
