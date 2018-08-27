@@ -25,7 +25,14 @@
 	height:300px;
 	width:500px;
   }
-  
+.font-face
+{
+	font-family: 'win_innwaregular';
+	src: url("{{url_for('static',filename='wininnwa-webfont.woff2')}}") format('woff2'),url("{{url_for('static',filename='wininnwa-webfont.woff')}}") format('woff');
+	font-weight: normal;
+	font-style: normal;
+
+}
 				body 
 					{
 						display: flex;
@@ -97,7 +104,7 @@
 		
 					<ul class="right hide-on-med-and-down">
 					
-					<li><a href="/index" >
+					<li><a href="/" >
 						Home</a>
                     </li>
                   <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>	
@@ -130,12 +137,12 @@
           </div>
          
           <div class="input-field col s6">
-		  <a class="waves-effect waves-light btn-large right"><i class="material-icons left">swap_vert</i><button type='submit>Convert</button></a>
+		  <a class="waves-effect waves-light btn-large right"><i class="material-icons left">swap_vert</i><button type='submit'>Convert</button></a>
 					
           </div>
         </div>
         </div>
-		</form>
+      </form>
      </div>
 		
 <footer class="page-footer">

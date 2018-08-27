@@ -8,7 +8,7 @@ $(document).ready(function() {
 			$('#source').css("font-family", "Pyidaungsu");
 		}
 		if(this.value == 'WinMyanmar'){
-			$('#source').css("font-family", "WinMyanmar");
+			$('#source').css("font-family", "win_innwaregular");
 		}
 	});
 
@@ -21,7 +21,7 @@ $(document).ready(function() {
 			$("#destination").css("font-family", "Pyidaungsu");
 		}
 		if (this.value == 'WinMyanmar'){
-			$("#destination").css("font-family", "WinMyanmar");		
+			$("#destination").css("font-family", "win_innwaregular");		
 		}
 	});
 });
