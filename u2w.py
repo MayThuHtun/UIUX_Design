@@ -26,7 +26,8 @@ def replace(input):
     output = re.sub(u'\u1011', u'\u0078', output)#ta_sin_tuu
     output = re.sub(u'\u1012', u'\u0027', output)#da_dway
     output = re.sub(u'\u1013', u'\u0022', output)#da_oat_chait
-    output = re.sub(u'\u1014', u'\u0045\u0065', output)#na_nge
+    output = re.sub(u'\u1014', u'\u0065', output)#na_nge
+    output = re.sub(u'\u108F', u'\u0045', output)#na_nge_a_pyat
     output = re.sub(u'\u1015', u'\u0079', output)#pa_sout
     output = re.sub(u'\u1016', u'\u007A', output)#pa_oo_htoke
     output = re.sub(u'\u1017', u'\u0041', output)#ba_dad_chait
@@ -146,7 +147,7 @@ def logical2visual(input):
     # 7=nga_tat
     # 8=aumyit
     # 9=yaychar
-    output = re.sub(u'([\u1000-\u1021])((?:\u103c)?)((?:\u103b)?)((?:\u103d)?)((?:\u103e)?)((?:\u1031)?)((?:\u103a)?)((?:\u1037)?)((:\u102c)?)','\\6\\2\\1\\3\\4\\5\\7\\8\\9', output)
+    output = re.sub(u'([\u1000-\u1021])((?:\u103c)?)((?:\u103b)?)((?:\u103d)?)((?:\u103e)?)((?:\u1031)?)((?:\u103a)?)((?:\u1037)?)((?:\u102c)?)((?:\u1039[\u1000-\u1021])?)', '\\6\\2\\1\\10\\3\\4\\5\\7\\8\\9', output)
     output = re.sub(u'(\u1021)((?:[\u102d\u102f])?)\u102f', u'\\1\\2\u006b', output)
 
 
@@ -156,7 +157,7 @@ def logical2visual(input):
     # nga_sint
     output = re.sub(u'\u102d\u1036\u1039', u'\u00f0', output)
     output = re.sub(u'\u1004\u103a\u1039', u'\u0046', output)  # normal
-    output = re.sub(u'(\u0046)([\u1000-\u1021])', '\\2\\1', output)
+    output = re.sub(u'(\u0046)((?:\u1031)?)([\u1000-\u1021])', '\\2\\3\\1', output)
     output = re.sub(u'([\u1000-\u1021])\u0046\u102d', u'\\1\u00d8', output)#lgt
     output = re.sub(u'([\u1000-\u1021])\u0046\u102e', u'\\1\u00d0', output)#longgyitinsanke
     output = re.sub(u'([\u1000-\u1021])\u0046\u1036', u'\\1\u00f8', output)#taytaytin
