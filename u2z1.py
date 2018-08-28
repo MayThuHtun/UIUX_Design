@@ -91,18 +91,30 @@ def precompose(input):
     output = re.sub(u'\u1039\u101C', u'\u1085', output)
     # la
 
+    output = re.sub(u'\u100b\u106d', u'\u1092', output)
+    #  hta-won-bae-a-yit
+    output = re.sub(u'\u100b\u106c', u'\u1097', output)
+    #  ta-ta-lin-short
+
+    output = re.sub(u'\u100f\u1039\u100d', u'\u1091', output)
+    #  gan-da
+
+    output = re.sub(u'\u100d\u1039\u100e', u'\u106f', output)
+    #  da-yin-mote+kaut
+
+    output = re.sub(u'\u100d\u1039\u100d', u'\u106e', output)
+    #  da-yin-kaut+kaut
+
     return output
 
 
 def logical2visual(input):
     output = input
 
+    # 1=letters,2=yayit,3=yapint,4=waswe,5=hahtoe,6=waswe_hahtoe,7=tha_wai_htoe,8=yay_cha
     output = re.sub(
-        u'([\u1000-\u1021])((?:[\u1060-\u1090])?)((?:\u103B)?)((?:\u103A)?)((?:\u103C)?)((?:\u103D)?)((?:\u108A)?)((?:\u1031)?)((?:\u1039)?)((?:\u1037)?)((:\u102C)?)',
-        '\\8\\3\\1\\4\\5\\6\\2\\7\\9\\10\\11', output)
-
-    output = re.sub(u'\u1038\u1039', u'\u1039\u1038', output)
-    # nag_that and with_sa_na_lone
+        u'([\u1000-\u1021])((?:\u103B)?)((?:\u103A)?)((?:\u103C)?)((?:\u103D)?)((?:\u108A)?)((?:\u1031)?)((?:\u102C)?)',
+        '\\7\\2\\1\\3\\4\\5\\6\\8', output)
 
     return output
 
@@ -165,9 +177,6 @@ def shape(input):
     output = re.sub(u'(\u100A)\u103D', u'\\1\u1087', output)
     # with nya
 
-    # nya-lay
-    output = re.sub(u'\u1009(\u1039)', u'\u1025\\1', output)
-
     # ya-kaut
     output = re.sub(u'\u101B\u102F', u'\u1090\u102F', output)
     # ya-kaut with 1-chaunggin
@@ -189,4 +198,6 @@ def convert(input):
     output = replace(output)
     output = logical2visual(output)
     output = shape(output)
+
     return output
+
